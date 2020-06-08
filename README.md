@@ -24,9 +24,13 @@ simple Elasticsearch client for searching products
 
   Place the synonym file in Elasticsearch configuration folder under custom/products_synonyms.
 
-  Run ES normally, and create the index with the "Index creation" request in the provided Postman collection. After index creation, "Bulk data" can be run and the data is going to be loaded in ES.
+  Run ES normally, and use Postman with the provided Postman Collection to create the index with the "Index creation" request. After index creation, "Bulk data" can be run and the data is going to be loaded in ES.
+
+  In case Postman is not in your system, index.json and data.json files contain the index and data.
 
   The provided data contains different types and brands of dried pasta, brands are "Lucchetti", "Carozzi", "Acuenta", "Tottus", types are "Espirales", "Canutos", "Spagetti", "Corbatas", "Canelones". The supermarkets are "Lider", located at "-33.45, -70.6214", and "Tottus" located at "-33.442,-70.626". 
+
+  In case 
 
 ### Payload
 
@@ -46,3 +50,5 @@ simple Elasticsearch client for searching products
   "address" is the user address, and "location" is a string in the format "lat, lon", for the exercise purpose, it is the same that retrieved from google maps. For the provided location, "Tottus" and "Lider" are within 3KM, but only "Lider" is within 2km.
 
   "distance" is the distance range the store can be from the provided location (here location is assumed to be user location)
+
+  In ca

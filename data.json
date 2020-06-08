@@ -1,0 +1,60 @@
+{"index":{"_id":1}
+{"name":"Espirales", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Lucchetti", "type":"Abarrotes", "price":680, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":2}
+{"name":"Canutos", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Lucchetti", "type":"Abarrotes", "price":680, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":3}
+{"name":"Spagetti", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Lucchetti", "type":"Abarrotes", "price":680, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":4}
+{"name":"Canelones", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Lucchetti", "type":"Abarrotes", "price":680, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":5}
+{"name":"Corbatas", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Lucchetti", "type":"Abarrotes", "price":680, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":6}
+{"name":"Espirales", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Carozzi", "type":"Abarrotes", "price":650, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":7}
+{"name":"Canutos", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Carozzi", "type":"Abarrotes", "price":650, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":8}
+{"name":"Spagetti", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Carozzi", "type":"Abarrotes", "price":650, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":9}
+{"name":"Canelones", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Carozzi", "type":"Abarrotes", "price":650, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":10}
+{"name":"Corbatas", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Carozzi", "type":"Abarrotes", "price":650, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":11}
+{"name":"Espirales", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Acuenta", "type":"Abarrotes", "price":550, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":12}
+{"name":"Canutos", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Acuenta", "type":"Abarrotes", "price":550, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":13}
+{"name":"Spagetti", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Acuenta", "type":"Abarrotes", "price":550, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":14}
+{"name":"Canelones", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Acuenta", "type":"Abarrotes", "price":550, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":15}
+{"name":"Corbatas", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Acuenta", "type":"Abarrotes", "price":550, "package":"400grs", "store":"Lider", "storeLocation":"-33.45, -70.6214"}
+{"index":{"_id":16}
+{"name":"Espirales", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Lucchetti", "type":"Abarrotes", "price":680, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":17}
+{"name":"Canutos", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Lucchetti", "type":"Abarrotes", "price":680, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":18}
+{"name":"Spagetti", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Lucchetti", "type":"Abarrotes", "price":680, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":19}
+{"name":"Canelones", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Lucchetti", "type":"Abarrotes", "price":680, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":20}
+{"name":"Corbatas", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Lucchetti", "type":"Abarrotes", "price":680, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":21}
+{"name":"Espirales", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Carozzi", "type":"Abarrotes", "price":650, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":22}
+{"name":"Canutos", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Carozzi", "type":"Abarrotes", "price":650, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":23}
+{"name":"Spagetti", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Carozzi", "type":"Abarrotes", "price":650, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":24}
+{"name":"Canelones", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Carozzi", "type":"Abarrotes", "price":650, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":25}
+{"name":"Corbatas", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Carozzi", "type":"Abarrotes", "price":650, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":26}
+{"name":"Espirales", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Tottus", "type":"Abarrotes", "price":550, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":27}
+{"name":"Canutos", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Tottus", "type":"Abarrotes", "price":550, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":28}
+{"name":"Spagetti", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Tottus", "type":"Abarrotes", "price":550, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":29}
+{"name":"Canelones", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Tottus", "type":"Abarrotes", "price":550, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
+{"index":{"_id":30}
+{"name":"Corbatas", "description":"Pasta seca en base a harina de trigo enriquecido", "brand":"Tottus", "type":"Abarrotes", "price":550, "package":"400grs", "store":"Tottus", "storeLocation":"-33.442,-70.626"}
