@@ -86,8 +86,8 @@ DATABASES = {
 
 # Create ES Connection
 connections.configure(
-    cl={'hosts':['localhost'], 'timeout':20, 'sniff_on_start': True},
-    pe={'hosts':['localhost:9201'], 'timeout':20},
+    cl={'hosts':['localhost:9201'], 'timeout':20, 'sniff_on_start': True},
+    pe={'hosts':['localhost'], 'timeout':20},
     timeout={'hosts':['localhost'], 'timeout':0.0001},
     notfound={'hosts':['notreales.oi'], 'timeout':20}
     )

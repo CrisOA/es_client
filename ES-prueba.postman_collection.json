@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "b0dd4c90-88d6-407d-a0d0-591bf63dfe8c",
+		"name": "ES-prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Index creation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mappings\": {\n        \"properties\": {\n            \"name\": {\n                \"type\": \"text\",\n                \"copy_to\": \"fuzzy_name\",\n                \"analyzer\": \"standard\",\n                \"search_analyzer\": \"synonym_analyzer\"\n            },\n            \"description\": {\n                \"type\": \"text\",\n                \"copy_to\": \"fuzzy_name\",\n                \"analyzer\": \"standard\",\n                \"search_analyzer\": \"synonym_analyzer\"\n            },\n            \"brand\": {\n                \"type\": \"text\",\n                \"copy_to\": \"fuzzy_name\",\n                \"analyzer\": \"standard\",\n                \"search_analyzer\": \"synonym_analyzer\"\n            },\n            \"type\": {\n                \"type\": \"text\",\n                \"copy_to\": \"fuzzy_name\",\n                \"analyzer\": \"standard\",\n                \"search_analyzer\": \"synonym_analyzer\"\n            },\n            \"package\": {\n                \"type\": \"text\",\n                \"index\": false\n            },\n            \"price\": {\n                \"type\": \"text\",\n                \"index\": false\n            },\n            \"store\": {\n                \"type\": \"text\",\n                \"copy_to\": \"fuzzy_store\",\n                \"analyzer\": \"standard\",\n                \"search_analyzer\": \"synonym_analyzer\",\n                \"fields\": {\n                    \"keyword\": {\n                        \"type\": \"keyword\"\n                    }\n                }\n            },\n            \"storeLocation\": {\n                \"type\": \"geo_point\"\n            },\n            \"fuzzy_name\": {\n                \"type\": \"text\"\n            },\n            \"fuzzy_description\": {\n                \"type\": \"text\"\n            },\n            \"fuzzy_brand\": {\n                \"type\": \"text\"\n            },\n            \"fuzzy_type\": {\n                \"type\": \"text\"\n            },\n            \"fuzzy_store\": {\n                \"type\": \"text\"\n            }\n        }\n    },\n    \"settings\": {\n        \"index\": {\n            \"analysis\": {\n                \"filter\": {\n                    \"products_synonyms\": {\n                        \"type\": \"synonym\",\n                        \"synonyms_path\": \"custom/products_synonyms.txt\",\n                        \"updateable\": true\n                    }\n                },\n                \"analyzer\": {\n                    \"synonym_analyzer\": {\n                        \"filter\": [\n                            \"lowercase\",\n                            \"products_synonyms\"\n                        ],\n                        \"tokenizer\": \"whitespace\"\n                    }\n                }\n            }\n        }\n    }\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9200/productos-cl",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9200",
+					"path": [
+						"productos-cl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk Data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"index\":{\"_id\":1}\n{\"name\":\"Espirales\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Lucchetti\", \"type\":\"Abarrotes\", \"price\":680, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":2}\n{\"name\":\"Canutos\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Lucchetti\", \"type\":\"Abarrotes\", \"price\":680, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":3}\n{\"name\":\"Spagetti\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Lucchetti\", \"type\":\"Abarrotes\", \"price\":680, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":4}\n{\"name\":\"Canelones\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Lucchetti\", \"type\":\"Abarrotes\", \"price\":680, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":5}\n{\"name\":\"Corbatas\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Lucchetti\", \"type\":\"Abarrotes\", \"price\":680, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":6}\n{\"name\":\"Espirales\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Carozzi\", \"type\":\"Abarrotes\", \"price\":650, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":7}\n{\"name\":\"Canutos\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Carozzi\", \"type\":\"Abarrotes\", \"price\":650, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":8}\n{\"name\":\"Spagetti\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Carozzi\", \"type\":\"Abarrotes\", \"price\":650, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":9}\n{\"name\":\"Canelones\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Carozzi\", \"type\":\"Abarrotes\", \"price\":650, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":10}\n{\"name\":\"Corbatas\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Carozzi\", \"type\":\"Abarrotes\", \"price\":650, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":11}\n{\"name\":\"Espirales\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Acuenta\", \"type\":\"Abarrotes\", \"price\":550, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":12}\n{\"name\":\"Canutos\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Acuenta\", \"type\":\"Abarrotes\", \"price\":550, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":13}\n{\"name\":\"Spagetti\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Acuenta\", \"type\":\"Abarrotes\", \"price\":550, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":14}\n{\"name\":\"Canelones\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Acuenta\", \"type\":\"Abarrotes\", \"price\":550, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":15}\n{\"name\":\"Corbatas\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Acuenta\", \"type\":\"Abarrotes\", \"price\":550, \"package\":\"400grs\", \"store\":\"Lider\", \"storeLocation\":\"-33.45, -70.6214\"}\n{\"index\":{\"_id\":16}\n{\"name\":\"Espirales\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Lucchetti\", \"type\":\"Abarrotes\", \"price\":680, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":17}\n{\"name\":\"Canutos\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Lucchetti\", \"type\":\"Abarrotes\", \"price\":680, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":18}\n{\"name\":\"Spagetti\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Lucchetti\", \"type\":\"Abarrotes\", \"price\":680, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":19}\n{\"name\":\"Canelones\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Lucchetti\", \"type\":\"Abarrotes\", \"price\":680, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":20}\n{\"name\":\"Corbatas\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Lucchetti\", \"type\":\"Abarrotes\", \"price\":680, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":21}\n{\"name\":\"Espirales\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Carozzi\", \"type\":\"Abarrotes\", \"price\":650, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":22}\n{\"name\":\"Canutos\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Carozzi\", \"type\":\"Abarrotes\", \"price\":650, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":23}\n{\"name\":\"Spagetti\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Carozzi\", \"type\":\"Abarrotes\", \"price\":650, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":24}\n{\"name\":\"Canelones\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Carozzi\", \"type\":\"Abarrotes\", \"price\":650, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":25}\n{\"name\":\"Corbatas\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Carozzi\", \"type\":\"Abarrotes\", \"price\":650, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":26}\n{\"name\":\"Espirales\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Tottus\", \"type\":\"Abarrotes\", \"price\":550, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":27}\n{\"name\":\"Canutos\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Tottus\", \"type\":\"Abarrotes\", \"price\":550, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":28}\n{\"name\":\"Spagetti\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Tottus\", \"type\":\"Abarrotes\", \"price\":550, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":29}\n{\"name\":\"Canelones\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Tottus\", \"type\":\"Abarrotes\", \"price\":550, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n{\"index\":{\"_id\":30}\n{\"name\":\"Corbatas\", \"description\":\"Pasta seca en base a harina de trigo enriquecido\", \"brand\":\"Tottus\", \"type\":\"Abarrotes\", \"price\":550, \"package\":\"400grs\", \"store\":\"Tottus\", \"storeLocation\":\"-33.442,-70.626\"}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9200/productos-cl/_bulk",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"productos-cl",
+						"_bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"term\":\"fideos\",\n\t\"address\":{\n\t\t\"country\":\"cl\",\n\t\t\"location\":\"-33.46117,-70.618\"\n\t},\n\t\"preferences\":[\"cocacola\",\"costa\",\"carozzi\"],\n\t\"distance\": \"3km\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/search/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"search",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

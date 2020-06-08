@@ -1,0 +1,90 @@
+{
+    "mappings": {
+        "properties": {
+            "name": {
+                "type": "text",
+                "copy_to": "fuzzy_name",
+                "analyzer": "standard",
+                "search_analyzer": "synonym_analyzer"
+            },
+            "description": {
+                "type": "text",
+                "copy_to": "fuzzy_name",
+                "analyzer": "standard",
+                "search_analyzer": "synonym_analyzer"
+            },
+            "brand": {
+                "type": "text",
+                "copy_to": "fuzzy_name",
+                "analyzer": "standard",
+                "search_analyzer": "synonym_analyzer"
+            },
+            "type": {
+                "type": "text",
+                "copy_to": "fuzzy_name",
+                "analyzer": "standard",
+                "search_analyzer": "synonym_analyzer"
+            },
+            "package": {
+                "type": "text",
+                "index": false
+            },
+            "price": {
+                "type": "text",
+                "index": false
+            },
+            "store": {
+                "type": "text",
+                "copy_to": "fuzzy_store",
+                "analyzer": "standard",
+                "search_analyzer": "synonym_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "storeLocation": {
+                "type": "geo_point"
+            },
+            "fuzzy_name": {
+                "type": "text"
+            },
+            "fuzzy_description": {
+                "type": "text"
+            },
+            "fuzzy_brand": {
+                "type": "text"
+            },
+            "fuzzy_type": {
+                "type": "text"
+            },
+            "fuzzy_store": {
+                "type": "text"
+            }
+        }
+    },
+    "settings": {
+        "index": {
+            "analysis": {
+                "filter": {
+                    "products_synonyms": {
+                        "type": "synonym",
+                        "synonyms_path": "custom/products_synonyms.txt",
+                        "updateable": true
+                    }
+                },
+                "analyzer": {
+                    "synonym_analyzer": {
+                        "filter": [
+                            "lowercase",
+                            "products_synonyms"
+                        ],
+                        "tokenizer": "whitespace"
+                    }
+                }
+            }
+        }
+    }
+
+}

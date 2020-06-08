@@ -2,7 +2,7 @@ from elasticsearch_dsl import Search, Q, A
 
 class Requestor:
     '''
-        Class to request and parse relevant information to response json
+        Class to request and parse relevant information to json response
     '''
     def get_matches(self, data):
         country = data['address']['country']
@@ -13,8 +13,11 @@ class Requestor:
 
         search = search.query(query)
         
+        # Adding max possible return hits for regular search
+        search = search[0:10000]
+
         resQ = search.execute()
-        
+
         response = self._post_process(resQ.to_dict())
         
         return response
